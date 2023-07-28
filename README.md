@@ -7,7 +7,8 @@ The Polybar configuration would be under `/config/polybar/`.
 
 I created two scripts that i used for some functionalities of the bar, for example muting the mic,getting fan speed,getting mic volume...
 
-![polybar](https://github.com/husseinhareb/Polybar-Config/assets/88323940/27f0cdbb-83c9-42f9-8c45-2b10c71ff3aa)
+![Screenshot from 2023-07-27 22-39-10](https://github.com/husseinhareb/Polybar-Config/assets/88323940/4d516ff5-0ce2-4e5c-b23c-9860bb84a93f)
+
 
 [Wallpaper Used](https://wallhaven.cc/w/qzljo7)
 
