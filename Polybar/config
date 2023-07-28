@@ -29,7 +29,10 @@ blue = #89b4fa
 mauve = #c75eff
 green = #26fc29
 lightblue = #81bcf7
-blueblue = #147eff
+blueblue = #FDB026
+new = #9A0E58
+new1 = #4687AF
+new2 = #943567
 [bar/main]
 width = 100%
 height = 20pt
@@ -37,7 +40,7 @@ radius = 0
 
 ; dpi = 96
 
-background = ${colors.background}
+background = ${colors.new}
 foreground = ${colors.foreground}
 
 line-size = 3pt
@@ -51,12 +54,12 @@ padding-right = 1
 module-margin = 0
 
 separator = |
-separator-foreground = ${colors.lightblue}
+separator-foreground = ${colors.lightnew1}
 font-0 = "JetBrainsMono Nerd Font"
 font-1 = "Symbols Nerd Font Mono"
 
 modules-left = date xworkspaces 
-modules-right =  temperature wlan backlight  battery pulseaudio  mic 
+modules-right =  fan temperature wlan backlight  battery pulseaudio  mic 
 modules-center = title
 
 cursor-click = pointer
@@ -80,9 +83,9 @@ type = internal/xwindow
 type = internal/xworkspaces
 
 label-active = %name%
-label-active-background = ${colors.background-alt}
-label-active-foreground = ${colors.lightblue}
-label-active-underline= ${colors.blue}
+label-active-background = ${colors.new2}
+label-active-foreground = ${colors.new1}
+label-active-underline= ${colors.new1}
 label-active-padding = 1
 
 label-occupied = %name%
@@ -101,9 +104,9 @@ label-empty-padding = 1
 
 [module/mic]
 type = custom/script
-exec = ~/path/to/mic.sh 
+exec = ~/Scripts/mic.sh
 interval = 1  # Update interval in seconds
-format-foreground = ${colors.blue}
+format-foreground = ${colors.new1}
 format = <label>
 label = %output%
 enable-scroll = true
@@ -116,8 +119,8 @@ click-left = ~/Scripts/mic.sh 1
 type = internal/pulseaudio
 
 format-volume-prefix = "󰕾 "
-format-volume-foreground = ${colors.blue}
-format-volume-prefix-foreground = ${colors.blue}
+format-volume-foreground = ${colors.new1}
+format-volume-prefix-foreground = ${colors.new1}
 format-volume = <label-volume>
 label-volume = %percentage%%
 
@@ -133,7 +136,7 @@ card = nvidia_0
 use-actual-brightness = true
 enable-scroll = true
 format = <ramp> <label>
-format-foreground = ${colors.blue}
+format-foreground = ${colors.new1}
 label = %percentage%%
 
 ramp-0 = 󰃞
@@ -179,8 +182,8 @@ interface-type = wireless
 
 interval = 1
 format-connected-prefix = 󰖩
-format-connected-prefix-foreground = ${colors.blue}
-format-connected-foreground = ${colors.blue}
+format-connected-prefix-foreground = ${colors.new1}
+format-connected-foreground = ${colors.new1}
 format-connected = <label-connected>
 label-connected = "%{A1:wifimenu:}%signal%%%{A}"
 label-connected-padding = 1
@@ -188,7 +191,7 @@ label-connected-padding = 1
 format-disconnected = <label-disconnected>
 format-disconnected-padding = 1
 label-disconnected = 󰖪
-label-disconnected-foreground = ${colors.blue}
+label-disconnected-foreground = ${colors.new1}
 label-disconnected-padding = 1
 
 
@@ -199,8 +202,8 @@ low-at = 20
 battery = BAT0
 adapter = ADP1
 poll-interval = 5
-format-charging-foreground = ${colors.blue}
-format-discharging-foreground = ${colors.blue}
+format-charging-foreground = ${colors.new1}
+format-discharging-foreground = ${colors.new1}
 format-charging = <animation-charging><label-charging>
 format-discharging = <ramp-capacity><label-discharging>
 label-charging = %percentage%%
@@ -243,7 +246,7 @@ date =   %H:%M
 date-alt = %Y-%m-%d %H:%M:%S
 
 label = %date%
-label-foreground = ${colors.blue}
+label-foreground = ${colors.new1}
 
 
 
@@ -259,15 +262,15 @@ hwmon-path = /sys/class/hwmon/hwmon3/temp1_input
 base-temperature = 20
 warn-temperature = 60
 units = false
-format-foreground = ${colors.blue}
+format-foreground = ${colors.new1}
 format = <label>
 label =   %temperature-c%°C
 
 [module/fan]
 type = custom/script
-exec = ~/path/to/fan_speed.sh
+exec = ~/Scripts/fan.sh
 interval = 1
-format-foreground = ${colors.blue}
+format-foreground = ${colors.new1}
 format = <label>
 label = 󰈐 %output% rpm
 
