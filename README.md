@@ -9,7 +9,7 @@ I created two scripts that i used for some functionalities of the bar, for examp
 
 ![polybar](https://github.com/husseinhareb/Polybar-Config/assets/88323940/27f0cdbb-83c9-42f9-8c45-2b10c71ff3aa)
 
-[Wallpaper Used](https://wallhaven.cc/w/weqmkp)
+[Wallpaper Used](https://wallhaven.cc/w/qzljo7)
 
 Note:The file where the speed of fans gets storred can differ from a computer to another. You will have to look it up and change the path of it in the bash file fan_speed.sh
 
